@@ -1,21 +1,82 @@
 <!DOCTYPE html>
-<html lang='pt-br'>
+<html lang="pt-BR">
 <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>raiane</title>
-    <link rel='stylesheet' href='main.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBurger - O melhor sabor</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-<h1>Meu blog tech</h1>
-<p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
-</header>
-<main>
-<h2>Meu primeiro post</h2>
-<p>Por: Raiane</p>
-<p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
-</main>
-<body>
-<html>
-    
+        <div class="logo">Dev<span>Burger</span></div>
+        <nav>
+            <a href="#cardapio">Cardápio</a>
+            <button id="ver-carrinho">Carrinho (<span id="contagem-carrinho">0</span>)</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>O hambúrguer mais artesanal da sua região!</h1>
+        <p>Escolha, peça e saboreie no conforto da sua casa.</p>
+        <a href="#cardapio" class="btn-principal">Ver Cardápio</a>
+    </section>
+
+    <main id="cardapio" class="container">
+        <h2>Nosso Cardápio</h2>
+        <div class="grid-cardapio">
+            
+            <div class="item-produto" data-id="1" data-nome="Dev Classic" data-preco="25.00">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500" alt="Dev Classic">
+                <h3>Dev Classic</h3>
+                <p>Pão brioche, blend de 150g, queijo cheddar e maionese da casa.</p>
+                <div class="preco-compra">
+                    <span>R$ 25,00</span>
+                    <button class="add-carrinho">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item-produto" data-id="2" data-nome="Dev Bacon" data-preco="30.00">
+                <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=500" alt="Dev Bacon">
+                <h3>Dev Bacon</h3>
+                <p>Pão australiano, blend de 150g, muito bacon crocante e barbecue.</p>
+                <div class="preco-compra">
+                    <span>R$ 30,00</span>
+                    <button class="add-carrinho">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item-produto" data-id="3" data-nome="Dev Salad" data-preco="28.00">
+                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=500" alt="Dev Salad">
+                <h3>Dev Salad</h3>
+                <p>Pão brioche, blend de 150g, alface, tomate, cebola roxa e queijo prato.</p>
+                <div class="preco-compra">
+                    <span>R$ 28,00</span>
+                    <button class="add-carrinho">Adicionar</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="modal-carrinho" class="modal">
+        <div class="conteudo-modal">
+            <span class="fechar">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <div id="itens-carrinho">
+                <p class="carrinho-vazio">Seu carrinho está vazio.</p>
+            </div>
+            <div class="total-carrinho">
+                <strong>Total: R$ <span id="preco-total">0,00</span></strong>
+            </div>
+            <button id="finalizar-pedido" class="btn-finalizar">Finalizar Pedido via WhatsApp</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 DevBurger - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
